@@ -13,7 +13,7 @@
    3.2: 谷歌浏览器在 `<div contenteditable ></div>` 时也会生效
 4. 兼容性： IE6+、谷歌火狐 Safari 都支持
 
-![contenteditable兼容性](../../assets/img/1.png)
+![contenteditable兼容性](../../assets/002/img/1.png)
 
 ## 三、具体应用
 
@@ -22,12 +22,12 @@
 因为 contenteditable 只是一个 html 属性，所以它不能让一个 div 元素支持 placeholder 属性，这时候就需要我们自己实现一个 placeholder 的效果了。
 
 模拟 placeholder 属性，我们使用 CSS 的 :empty ，兼容性 ≥ IE9
-![:empty兼容性](../../assets/img/2.png)
+![:empty兼容性](../../assets/002/img/2.png)
 注意：IE 浏览器下 focus 时的光标可能会在 placeholder 文字的最后，若要解决这个问题，可以在获取焦点时重置伪元素的 content 属性。
 
 图例：
 
-![模拟 placeholder 属性](../../assets/img/3.png)
+![模拟 placeholder 属性](../../assets/002/img/3.png)
 
 代码：
 
@@ -79,7 +79,7 @@
 
 - range 对象，是一个只读的对象，里面所有的属性都是只读的
 
-  ![range对象](../../assets/img/4.png)
+  ![range对象](../../assets/002/img/4.png)
 
   ```js
   let range = {
@@ -185,7 +185,7 @@ function insertNode(rangeObj, str, hideIndex) {
 
 具体可以参照下图：
 
-![换行bug](../../assets/img/5.gif)
+![换行bug](../../assets/002/img/5.gif)
 
 解决方法如下：
 
@@ -302,7 +302,7 @@ this.editDom.addEventListener('paste', e => {
 2. 当编辑栏中不止有文字还有图片的时候，此时就得先判断最后一个节点，是文字节点还是图片节点。
 3. 文字节点需要删除文字内容的最后一个字，而不是整个节点。
 
-![退格删除](../../assets/img/6.png)
+![退格删除](../../assets/002/img/6.png)
 
 解决方法：退格删除文字和表情功能，需要处理的就是编辑栏最后的看不见的空节点，若是编辑栏最后一个节点为空，则递归删除，直到不为空为止。
 
