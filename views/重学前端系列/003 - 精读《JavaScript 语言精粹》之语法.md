@@ -97,8 +97,7 @@
 
 ### 问：1e3 在计算时表示什么意思？
 
-答：科学计数法，计算过程如下：
-$$1e3 => 1 * 10^3 => 1000$$
+答：科学计数法，计算过程如图：![CodeCogsEqn](https://user-images.githubusercontent.com/13802207/67953739-ab0b9600-fc2a-11e9-8711-cac8a7a8fcda.gif)
 
 ### 问：NaN 到底是个什么东西？
 
